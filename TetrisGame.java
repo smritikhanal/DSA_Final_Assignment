@@ -188,7 +188,6 @@ public class TetrisGame extends JPanel {
         g.setColor(Color.WHITE);
         g.drawString("Score: " + score, 10, 20);
     }
-
     public static void main(String[] args) {
         JFrame frame = new JFrame("Tetris");
         TetrisGame game = new TetrisGame();

@@ -1,5 +1,4 @@
 public class EmployeeRewards {
-
     // Function to determine the minimum number of rewards needed
     public static int minRewards(int[] ratings) {
         int n = ratings.length;
@@ -8,8 +7,7 @@ public class EmployeeRewards {
         // Initially give 1 reward to each employee
         for (int i = 0; i < n; i++) {
             rewards[i] = 1;
-        }
-        
+        }       
         // First pass (left to right): Ensure that employees with higher ratings than their left neighbors get more rewards
         for (int i = 1; i < n; i++) {
             if (ratings[i] > ratings[i - 1]) {
@@ -22,8 +20,7 @@ public class EmployeeRewards {
             if (ratings[i] > ratings[i + 1]) {
                 rewards[i] = Math.max(rewards[i], rewards[i + 1] + 1);
             }
-        }
-        
+        }       
         // Sum up the rewards
         int totalRewards = 0;
         for (int i = 0; i < n; i++) {
@@ -32,7 +29,6 @@ public class EmployeeRewards {
         
         return totalRewards;
     }
-
     public static void main(String[] args) {
         // Example test cases for employee rewards
         System.out.println("Minimum Rewards Needed:");
